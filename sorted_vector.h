@@ -35,14 +35,14 @@ class sorted_vector /*<class T, class Compare, class Alloc>*/ {
 public:
     /*cplusplus.com*/
     /*empty(1)*/
-    /*explicit*/sorted_vector(Compare *comp = &Compare(),
-                           Alloc *alloc = &Alloc())
+    /*explicit*/sorted_vector(Compare comp = Compare(),
+                           Alloc alloc = Alloc())
             : alloc (alloc), comp (comp), data_size (0), reserved_size (0),
                                                     array (nullptr){};
     /*range(2)*/
     sorted_vector(T* first, T* last,
-                  Compare *comp = &Compare(),
-                  Alloc*alloc = &Alloc())
+                  Compare comp = Compare(),
+                  Alloc alloc = Alloc())
             : alloc (alloc), comp (comp) {
         data_size = last-first;
         reserved_size = data_size * data_size;
@@ -300,8 +300,8 @@ public:
 
 private:
     /*DATA*/
-    Alloc* alloc;
-    Compare &comp;
+    Alloc alloc;
+    Compare comp;
     size_t data_size;
     size_t reserved_size;
     T *array;
