@@ -4,7 +4,7 @@
 
 
 
-#when you've no time and don't know how std::vector, std::map, std::string exactly works
+#when you've no time and don't know how std::vector, std::map, std::string exactly works <br><br>
 /media/greyzerus/Files/gitfolder/HW7/main.cpp: In constructor ‘sorted_vector<T, Compare, Alloc>::sorted_vector(Compare&, Alloc&) [with T = int; Compare = std::less<int>; Alloc = std::allocator<int>]’:
 /media/greyzerus/Files/gitfolder/HW7/main.cpp:13:24: error: invalid initialization of non-const reference of type ‘std::less<int>&’ from an rvalue of type ‘std::less<int>’
      sorted_vector<int> example;
